@@ -40,6 +40,10 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
   const imageLoader = {
     test: /\.(png|gif|jpg|jpeg)$/,
     type: "asset/resource",
+    generator: {
+      publicPath: "assets/",
+      outputPath: "assets/",
+    },
   };
 
   // const imageLoader = {
